@@ -6,6 +6,10 @@ import { TableKit } from "@tiptap/extension-table";
 import { useEditor, EditorContent } from "@tiptap/react";
 import { TaskItem, TaskList } from "@tiptap/extension-list";
 import { useEditorStore } from "@/store/use_editor_store";
+import { TextStyle, FontFamily, Color } from "@tiptap/extension-text-style";
+import Heading from "@tiptap/extension-heading";
+import Highlight from "@tiptap/extension-highlight";
+import Link from "@tiptap/extension-link";
 
 const Editor = () => {
   const { setEditor } = useEditorStore();
@@ -37,12 +41,22 @@ const Editor = () => {
     },
     extensions: [
       StarterKit,
+      Highlight.configure({ multicolor: true }),
+      Heading,
       TaskItem.configure({ nested: true }),
       TaskList,
       TableKit.configure({
         table: { resizable: true },
       }),
       Image,
+      TextStyle,
+      FontFamily,
+      Color,
+      Link.configure({
+        openOnClick: false,
+        autolink: true,
+        defaultProtocol: "https",
+      }),
     ],
     content: `
         <table>
