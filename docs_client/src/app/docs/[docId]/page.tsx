@@ -1,16 +1,16 @@
 "use client";
 
 import { use } from "react";
-import Editor from "./editor";
-import ToolBar from "./toolbar";
+import Editor from "@/components/editor";
+import Toolbar from "@/components/toolbar";
 
 const DocPage = ({ params }: { params: Promise<{ docId: string }> }) => {
   const { docId } = use(params);
-  console.log(docId)
+  console.log(docId);
 
   return (
     <div className="min-h-screen bg-[#fafbfd]">
-      <ToolBar />
+      <Toolbar />
       <Editor />
     </div>
   );
