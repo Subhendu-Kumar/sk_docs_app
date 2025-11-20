@@ -1,17 +1,11 @@
-import { cn } from "@/lib/utils";
-import { LucideIcon } from "lucide-react";
 import { FC } from "react";
-
-interface ToolbarButtonProps {
-  onClick?: () => void;
-  icon: LucideIcon;
-  isActive?: boolean;
-}
+import { cn } from "@/lib/utils";
+import { ToolbarButtonProps } from "@/types/toolbar_types";
 
 const ToolbarButton: FC<ToolbarButtonProps> = ({
   onClick,
-  icon: Icon,
   isActive,
+  icon: Icon,
 }) => {
   return (
     <button
