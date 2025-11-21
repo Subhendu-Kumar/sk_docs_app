@@ -1,12 +1,12 @@
-import { useEditorStore } from "@/store/use_editor_store";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 import { ListCollapseIcon } from "lucide-react";
 import { lineHeights } from "@/data/toolbar_data";
-import { cn } from "@/lib/utils";
+import { useEditorStore } from "@/store/use_editor_store";
 
 const LineHeightButton = () => {
   const { editor } = useEditorStore();

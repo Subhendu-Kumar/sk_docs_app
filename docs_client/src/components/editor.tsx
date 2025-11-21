@@ -1,19 +1,19 @@
 "use client";
 
+import Ruler from "./ruler";
+import Link from "@tiptap/extension-link";
 import Image from "@tiptap/extension-image";
 import StarterKit from "@tiptap/starter-kit";
-import { TableKit } from "@tiptap/extension-table";
-import { useEditor, EditorContent } from "@tiptap/react";
-import { TaskItem, TaskList } from "@tiptap/extension-list";
-import { useEditorStore } from "@/store/use_editor_store";
-import { TextStyle, FontFamily, Color } from "@tiptap/extension-text-style";
 import Heading from "@tiptap/extension-heading";
+import { TableKit } from "@tiptap/extension-table";
 import Highlight from "@tiptap/extension-highlight";
-import Link from "@tiptap/extension-link";
 import TextAlign from "@tiptap/extension-text-align";
+import { useEditor, EditorContent } from "@tiptap/react";
+import { useEditorStore } from "@/store/use_editor_store";
 import { FontSizeExtension } from "@/extensions/font_size";
+import { TaskItem, TaskList } from "@tiptap/extension-list";
 import { LineHeightExtension } from "@/extensions/line_height";
-import Ruler from "./ruler";
+import { TextStyle, FontFamily, Color } from "@tiptap/extension-text-style";
 
 const Editor = () => {
   const { setEditor } = useEditorStore();

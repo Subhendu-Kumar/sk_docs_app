@@ -1,7 +1,7 @@
 "use client";
 
-import { useEditorStore } from "@/store/use_editor_store";
 import { MinusIcon, PlusIcon } from "lucide-react";
+import { useEditorStore } from "@/store/use_editor_store";
 import { ChangeEvent, KeyboardEvent, useState } from "react";
 
 const FontSizeButton = () => {
@@ -11,9 +11,9 @@ const FontSizeButton = () => {
     ? editor?.getAttributes("textStyle").fontSize.replace("px", "")
     : "16";
 
+  const [isEditing, setIsEditing] = useState(false);
   const [fontSize, setFontSize] = useState(currentFontSize);
   const [inputValue, setInputValue] = useState(currentFontSize);
-  const [isEditing, setIsEditing] = useState(false);
 
   const updateFontSize = (newSize: string) => {
     const size = parseInt(newSize);

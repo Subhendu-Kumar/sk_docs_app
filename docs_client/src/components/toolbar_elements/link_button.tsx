@@ -1,20 +1,20 @@
 "use client";
 
-import { useEditorStore } from "@/store/use_editor_store";
-import { useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Link2Icon } from "lucide-react";
+import { useState } from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { Link2Icon } from "lucide-react";
+import { useEditorStore } from "@/store/use_editor_store";
 
 const LinkButton = () => {
   const { editor } = useEditorStore();
 
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState<string>("");
 
   const onChange = (href: string) => {
     editor?.chain().focus().extendMarkRange("link").setLink({ href }).run();

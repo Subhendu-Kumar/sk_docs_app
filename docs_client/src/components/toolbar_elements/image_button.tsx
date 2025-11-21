@@ -1,28 +1,28 @@
 "use client";
 
-import { useEditorStore } from "@/store/use_editor_store";
-import { Fragment, useState } from "react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { ImageIcon, SearchIcon, UploadIcon } from "lucide-react";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
 import {
   Dialog,
-  DialogContent,
+  DialogTitle,
   DialogFooter,
   DialogHeader,
-  DialogTitle,
+  DialogContent,
 } from "@/components/ui/dialog";
+import {
+  DropdownMenu,
+  DropdownMenuItem,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
+import { Fragment, useState } from "react";
+import { useEditorStore } from "@/store/use_editor_store";
+import { ImageIcon, SearchIcon, UploadIcon } from "lucide-react";
 
 const ImageButton = () => {
   const { editor } = useEditorStore();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [imageUrl, setImageUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState<string>("");
+  const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
 
   const onChange = (src: string) => {
     editor?.chain().focus().setImage({ src }).run();

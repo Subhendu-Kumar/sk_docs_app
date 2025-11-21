@@ -1,11 +1,11 @@
-import { useEditorStore } from "@/store/use_editor_store";
-import { ColorResult, SketchPicker } from "react-color";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { HighlighterIcon } from "lucide-react";
+import { ColorResult, SketchPicker } from "react-color";
+import { useEditorStore } from "@/store/use_editor_store";
 
 const TextHighlightColorButton = () => {
   const { editor } = useEditorStore();

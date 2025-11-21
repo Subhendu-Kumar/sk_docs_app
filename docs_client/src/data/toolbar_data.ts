@@ -1,17 +1,17 @@
-import { Alignment, Font, Heading, LineHight } from "@/types/toolbar_types";
 import {
-  AlignCenterIcon,
-  AlignJustifyIcon,
   AlignLeftIcon,
   AlignRightIcon,
+  AlignCenterIcon,
+  AlignJustifyIcon,
 } from "lucide-react";
+import { Alignment, Font, Heading, LineHight } from "@/types/toolbar_types";
 
 export const fonts: Font[] = [
   { label: "Arial", value: "Arial" },
-  { label: "Times New Roman", value: "Times New Roman" },
-  { label: "Courier New", value: "Courier New" },
   { label: "Georgia", value: "Georgia" },
   { label: "Verdana", value: "Verdana" },
+  { label: "Courier New", value: "Courier New" },
+  { label: "Times New Roman", value: "Times New Roman" },
 ];
 
 export const headings: Heading[] = [

@@ -1,13 +1,6 @@
-import { ChevronDown } from "lucide-react";
 import { FC } from "react";
-
-interface MarkerProps {
-  isLeft: boolean;
-  position: number;
-  isDragging: boolean;
-  onMouseDown: (e: React.MouseEvent<HTMLDivElement>) => void;
-  onDoubleClick: (e: React.MouseEvent<HTMLDivElement>) => void;
-}
+import { ChevronDown } from "lucide-react";
+import { MarkerProps } from "@/types/ruler_marker_types";
 
 const Marker: FC<MarkerProps> = ({
   isLeft,

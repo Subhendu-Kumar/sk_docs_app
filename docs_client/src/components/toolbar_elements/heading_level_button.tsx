@@ -1,16 +1,16 @@
-import { useEditorStore } from "@/store/use_editor_store";
 import {
   DropdownMenu,
-  DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDownIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Level } from "@tiptap/extension-heading";
+import { ChevronDownIcon } from "lucide-react";
 import { headings } from "@/data/toolbar_data";
+import { Level } from "@tiptap/extension-heading";
+import { useEditorStore } from "@/store/use_editor_store";
 
 const HeadingLevelButton = () => {
   const { editor } = useEditorStore();
