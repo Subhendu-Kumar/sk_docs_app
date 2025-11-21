@@ -7,6 +7,7 @@ import {
   Redo2Icon,
   RemoveFormattingIcon,
   SpellCheckIcon,
+  StrikethroughIcon,
   UnderlineIcon,
   Undo2Icon,
 } from "lucide-react";
@@ -81,6 +82,12 @@ const Toolbar = () => {
         isActive: editor?.isActive("underline"),
         onClick: () => editor?.chain().focus().toggleUnderline().run(),
       },
+      {
+        label: "Strikethrough",
+        icon: StrikethroughIcon,
+        isActive: editor?.isActive("strike"),
+        onClick: () => editor?.chain().focus().toggleStrike().run(),
+      },
     ],
     [
       {
@@ -104,7 +111,7 @@ const Toolbar = () => {
   ];
 
   return (
-    <div className="bg-[#f1f4f9] px-5 py-0.5 rounded-3xl min-h-10 flex items-center justify-center w-auto gap-1 mx-auto print:hidden">
+    <div className="bg-[#f1f4f9] px-5 py-0.5 rounded-3xl min-h-10 flex items-center justify-center w-auto gap-1">
       {sections.map((sectionGroup, groupIdx) => (
         <div key={groupIdx} className="flex items-center gap-x-0.5">
           {groupIdx === 2 && (

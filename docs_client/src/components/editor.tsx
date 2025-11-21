@@ -70,20 +70,6 @@ const Editor = () => {
         defaultLineHeight: "normal",
       }),
     ],
-    content: `
-        <table>
-          <tbody>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td>Cyndi Lauper</td>
-              <td>Singer</td>
-            </tr>
-          </tbody>
-        </table>
-      `,
     immediatelyRender: false,
     editorProps: {
       attributes: {
